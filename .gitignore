@@ -1,0 +1,3 @@
+# Ignore operating system files (optional but recommended)
+.DS_Store
+Thumbs.db

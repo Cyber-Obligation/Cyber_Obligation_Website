@@ -1,0 +1,19 @@
+# Node modules (for both backend and frontend)
+node_modules/
+
+# Ignore .env files (environment variables)
+.env
+
+# Ignore Firebase service account key (never submit sensitive credentials)
+serviceAccountKey.json
+
+# Ignore logs (optional)
+*.log
+
+# Ignore operating system files (optional but recommended)
+.DS_Store
+Thumbs.db
+
+# Ignore build directories (optional)
+build/
+dist/
