@@ -14,14 +14,6 @@ module.exports = (db, DataTypes) =>
             type: DataTypes.STRING(255),
             allowNull: true,
         },
-        accessToken: {
-            type: DataTypes.TEXT,
-            allowNull: true,
-        },
-        refreshToken: {
-            type: DataTypes.TEXT,
-            allowNull: true,
-        },
         oauthProviderId: {
             type: DataTypes.STRING(255),
             allowNull: false,
