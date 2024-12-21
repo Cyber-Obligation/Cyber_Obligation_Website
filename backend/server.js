@@ -41,13 +41,16 @@ app.all("*", (req, res, next) => {
 // Sync the database.
 db.sync()
 
-// Add routes
-// require("./routes/user.routes.js")(express, app)
-// require("./routes/movie.routes.js")(express, app)
-// require("./routes/review.routes.js")(express, app)
-// require("./routes/location.routes.js")(express, app)
-// require("./routes/reservation.routes.js")(express, app)
-// require("./routes/session.routes.js")(express, app)
+// Routes
+require("./routes/user.routes.js")(express, app)
+// require("./routes/subscription.routes.js/")(express, app)
+require("./routes/subObligation.routes.js")(express, app)
+require("./routes/obligation.routes.js")(express, app)
+// require("./routes/notification.routes.js")(express, app)
+// require("./routes/complianceLawCategories.routes.js/")(express, app)
+require("./routes/complianceLaw.routes.js")(express, app)
+require("./routes/businessCategory.routes.js")(express, app)
+
 
 // Session Login Endpoint
 app.post("/sessionLogin", (req, res) => {

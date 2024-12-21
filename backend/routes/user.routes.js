@@ -3,7 +3,8 @@ module.exports = (express, app) => {
     const router = express.Router();
 
     // Get user by oauthProviderId (Send this in the body)
-    // TODO: Setup hasing for transmitting and storing oauthProviderId
+    // TODO: Setup hashing for transmitting and storing oauthProviderId
+    // Remember here you are sending the id via the body not 
     router.post("/oauth", controller.getUserByOauthProviderId);
 
     // Create user by id
