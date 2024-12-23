@@ -1,4 +1,5 @@
 module.exports = (express, app) => {
+    const authorizeFirebaseToken = require('../middleware/authMiddleware.js');
     const controller = require("../controllers/user.controllers.js");
     const router = express.Router();
 
@@ -11,10 +12,10 @@ module.exports = (express, app) => {
     router.post("/createUser", controller.createUser);
 
     // Delete user by id
-    router.delete("/user/:userId", controller.removeUserById);
+    router.delete("/user/:userId", authorizeFirebaseToken, controller.removeUserById);
 
     // Update user by id
-    router.patch("/user/:userId", controller.updateUserById);
+    router.patch("/user/:userId", authorizeFirebaseToken, controller.updateUserById);
 
     // Add routes to server.
     app.use("/api/users", router);
